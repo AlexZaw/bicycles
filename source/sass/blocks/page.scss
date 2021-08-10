@@ -1,0 +1,17 @@
+.page__wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.page__a11y-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.page__body {
+  margin: 0 auto;
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--c-text-primary);
+}

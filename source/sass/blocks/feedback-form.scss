@@ -1,0 +1,44 @@
+.feedback-form{
+  justify-self: end;
+}
+
+.feedback-form fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.feedback-form legend{
+  padding: 0;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: center;
+  color: var(--c-header);
+}
+.feedback-form__inner-wrapper {
+  display: grid;
+  row-gap: 20px;
+  margin-top: 20px;
+}
+.feedback-form input {
+  padding: 14px 30px 10px;
+  width: 100%;
+  font-family: var(--font-main);
+  font-size: 15px;
+  line-height: 24px;
+  border: 0;
+  box-shadow: inset 0 0 0 1px var(--bd-header-input);
+  border-radius: 6px;
+}
+
+.feedback-form [type="submit"] {
+  padding: 15px 48px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 21px;
+  color: var(--c-text-primary);
+  border: 0;
+  border-radius: 6px;
+  background-color: var(--accent-color);
+}
