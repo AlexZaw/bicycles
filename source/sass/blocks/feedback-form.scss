@@ -36,6 +36,10 @@
   @media (max-width: 1023px) {
     margin-top: 30px;
   }
+
+  @media (max-width: 767px) {
+    margin-top: 20px;
+  }
 }
 
 .feedback-form input {
@@ -51,10 +55,14 @@
   @media (max-width: 1023px) {
     padding: 12px 21px;
   }
+
+  @media (max-width: 767px) {
+    padding: 13px 26px 11px;
+  }
 }
 
 .feedback-form [type="submit"] {
-  padding: 15px 48px;
+  padding: 15px;
   font-size: 15px;
   font-weight: 600;
   line-height: 21px;
