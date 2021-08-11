@@ -1,8 +1,10 @@
 .feedback-form {
+  margin-top: 4px;
   justify-self: end;
 
   @media (max-width: 1023px) {
     justify-self: center;
+    margin-top: 0;
     padding-top: 70px;
     max-width: 324px;
   }

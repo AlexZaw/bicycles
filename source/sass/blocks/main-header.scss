@@ -122,11 +122,10 @@
 }
 
 .main-header__nav ul {
+  @include reset-list;
   display: flex;
   justify-content: space-between;
-  margin: 0;
   padding: 0 22px;
-  list-style-type: none;
 
   @media (max-width: 1023px) {
     display: block;
@@ -179,15 +178,6 @@
       transform: translateY(-50%) rotateZ(45deg);
       transition: border-color 0.2s;
     }
-
-    // &:hover,
-    // &:focus {
-    //   color: var(--accent-color);
-
-    //   &::after {
-    //     border-color: var(--accent-color);
-    //   }
-    // }
   }
 }
 

@@ -1,5 +1,6 @@
 'use strict';
 document.body.classList.remove('no-js');
+document.querySelector('.map iframe').removeAttribute('hidden');
 const menuBtn = document.querySelector('.menu-control');
 const menuIcons = menuBtn.querySelectorAll('.menu-control__icon');
 const menuBtnSvg = menuBtn.querySelector('svg');

@@ -1,0 +1,126 @@
+.main-footer {
+  @media (max-width: 767px) {
+    padding-bottom: 31px;
+  }
+}
+
+.main-footer__text {
+  text-align: center;
+
+  @media (max-width: 767px) {
+    padding: 0 16px;
+  }
+}
+
+.main-footer__text h2 {
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1;
+
+  @media (max-width: 1023px) {
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+
+.main-footer__text p {
+  max-width: 555px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 31px;
+
+  @media (max-width: 1023px) {
+    max-width: none;
+  }
+
+  @media (min-width: 768px) {
+    br {
+      display: none;
+    }
+  }
+}
+
+.main-footer__map {
+  margin-top: 41px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 1023px) {
+    margin-top: 20px;
+  }
+}
+
+.main-footer__map iframe {
+  width: 957px;
+  height: 530px;
+
+  @media (max-width: 1023px) {
+    width: 698px;
+    height: 545px;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+.main-footer__contacts {
+  margin-top: 38px;
+
+  @media (max-width: 1023px) {
+    margin-top: 20px;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 28px;
+  }
+}
+
+.main-footer__contacts ul {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
+  column-gap: 90px;
+  justify-content: center;
+  max-width: 957px;
+  margin: 0 auto;
+
+  @media (max-width: 767px) {
+    display: block;
+    padding: 0 16px;
+    text-align: center;
+  }
+}
+
+.main-footer__contacts li {
+  @media (max-width: 767px) {
+    margin-bottom: 22px;
+  }
+}
+
+.main-footer__contacts a {
+  text-decoration: none;
+  color: var(--c-footer-links);
+  transition: color 0.2s;
+  vertical-align: middle;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.main-footer__contacts svg {
+  vertical-align: middle;
+  margin-right: 15px;
+  fill: none;
+}
