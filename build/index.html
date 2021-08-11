@@ -10,69 +10,80 @@
 </head>
 
 <body class="page__body no-js">
-    <header class="main-header">
-      <div class="main-header__wrapper">
-        <!-- the class "menu-control--close" shows the styles of the button for closing the menu-->
-        <button class="menu-control" type="button">
-          <svg width="30" height="30">
-            <use width="30" height="30" class="menu-control__icon menu-control__icon--active" xlink:href="./img/sprite_auto.svg#icon-menu"></use>
-            <use width="24" height="25" class="menu-control__icon" xlink:href="./img/sprite_auto.svg#icon-cross"></use>
-          </svg>
-        </button>
-        <!-- the class "main-header__nav--closed" hides the mobile menu -->
-        <nav class="main-header__nav">
-          <ul>
-            <li>
-              <a href="#">О нас</a>
-            </li>
-            <li>
-              <a href="#">Виды велосипедов</a>
-            </li>
-            <li>
-              <a href="#">Видео про велосипеды</a>
-            </li>
-            <li>
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="main-header__content">
-          <div class="main-header__text">
-            <a class="main-header__logo">
-              <img src="./img/logo.svg" width="68" height="21" alt="Логотип компании Moon">
-            </a>
-            <h1>Мы продаем велосипеды</h1>
-            <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
-          </div>
-          <form class="main-header__form feedback-form" action="#">
-            <fieldset>
-              <legend>Заполните поля ниже и мы подберем велосипед Вашей мечты</legend>
-              <div class="feedback-form__inner-wrapper">
+  <header class="main-header">
+    <div class="main-header__wrapper">
+      <!-- the class "menu-control--close" shows the styles of the button for closing the menu-->
+      <button class="menu-control" type="button">
+        <svg width="30" height="30">
+          <use width="30" height="30" class="menu-control__icon menu-control__icon--active" xlink:href="./img/sprite_auto.svg#icon-menu"></use>
+          <use width="24" height="25" class="menu-control__icon" xlink:href="./img/sprite_auto.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <!-- the class "main-header__nav--closed" hides the mobile menu -->
+      <nav class="main-header__nav">
+        <ul>
+          <li>
+            <a href="#">О нас</a>
+          </li>
+          <li>
+            <a href="#">Виды велосипедов</a>
+          </li>
+          <li>
+            <a href="#">Видео про велосипеды</a>
+          </li>
+          <li>
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-header__content">
+        <div class="main-header__text">
+          <a class="main-header__logo">
+            <img src="./img/logo.svg" width="68" height="21" alt="Логотип компании Moon">
+          </a>
+          <h1>Мы продаем велосипеды</h1>
+          <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+        </div>
+        <form class="main-header__form feedback-form" action="#">
+          <fieldset>
+            <legend>Заполните поля ниже и мы подберем велосипед Вашей мечты</legend>
+            <div class="feedback-form__inner-wrapper">
               <input type="text" name="user-name" placeholder="Введите Ваше Имя">
               <input type="tel" name="user-phone" placeholder="Введите Ваш номер телефона">
               <button type="submit">Подобрать велосипед мечты</button>
             </div>
-            </fieldset>
-          </form>
-        </div>
+          </fieldset>
+        </form>
       </div>
-    </header>
-    <main></main>
-    <footer class="main-footer">
-      <div class="main-footer__text">
-        <h2>Как нас найти?</h2>
-        <p>Мы находимся по адресу: <br aria-hidden="true"> Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-      </div>
-      <div class="main-footer__map map">
-        <noscript>
-          <picture>
-              <source type="image/webp" media="(min-width: 1024px)" srcset="./img/common/map-desktop@1x.webp 1x,
+    </div>
+  </header>
+  <main>
+    <section class="about">
+      <h2>Несколько фактов о нас</h2>
+        <ul>
+          <li>Самый широкий выбор велосипедов!</li>
+          <li>Доставка велосипедов по всей России!</li>
+          <li>Большой выбор крутых аксессуаров!</li>
+          <li>Профессиональные консультации!</li>
+        </ul>
+    </section>
+
+  </main>
+  <footer class="main-footer">
+    <div class="main-footer__text">
+      <h2>Как нас найти?</h2>
+      <p>Мы находимся по адресу: <br aria-hidden="true"> Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+    </div>
+    <div class="main-footer__map map">
+      <noscript>
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="./img/common/map-desktop@1x.webp 1x,
               ./img/common/map-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="./img/common/map-tablet@1x.webp 1x,
+          <source type="image/webp" media="(min-width: 768px)" srcset="./img/common/map-tablet@1x.webp 1x,
               ./img/common/map-tablet@2x.webp 2x">
-              <source type="image/webp" media="(max-width: 767px)" srcset="./img/common/map-mobile@1x.webp 1x,
+          <source type="image/webp" media="(max-width: 767px)" srcset="./img/common/map-mobile@1x.webp 1x,
               ./img/common/map-mobile@2x.webp 2x">
-              <img srcset="
+          <img srcset="
               ./img/common/map-mobile@1x.png 320w,
               ./img/common/map-mobile@2x.png 640w,
               ./img/common/map-tablet@1x.png 768w,
@@ -86,28 +97,28 @@
                 ((min-width: 768px) and (min-resolution: 2dppx)) 1396px,
                 (max-width: 767px) 320px,
                 ((max-width: 767px) and (min-resolution: 2dppx)) 640px" src="./img/common/map-desktop@1x.png" width="957" height="530" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19">
-          </picture>
-        </noscript>
-        <iframe hidden="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124007!2d30.320894616173568!3d59.93879686904788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1628697289878!5m2!1sru!2sru" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
-      </div>
-      <div class="main-footer__contacts">
-        <ul>
-          <li>
-            <svg width="26" height="20">
-              <use xlink:href="./img/sprite_auto.svg#icon-email"></use>
-            </svg>
-            <a href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
-          </li>
-          <li>
-            <svg width="22" height="24">
-              <use xlink:href="./img/sprite_auto.svg#icon-phone"></use>
-            </svg>
-            <a href="tel:+749978468446">+7 (499) -784-684-46</a>
-          </li>
-        </ul>
-      </div>
-    </footer>
-    <script src="./js/main.js"></script>
+        </picture>
+      </noscript>
+      <iframe hidden="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124007!2d30.320894616173568!3d59.93879686904788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1628697289878!5m2!1sru!2sru" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="main-footer__contacts">
+      <ul>
+        <li>
+          <svg width="26" height="20">
+            <use xlink:href="./img/sprite_auto.svg#icon-email"></use>
+          </svg>
+          <a href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+        </li>
+        <li>
+          <svg width="22" height="24">
+            <use xlink:href="./img/sprite_auto.svg#icon-phone"></use>
+          </svg>
+          <a href="tel:+749978468446">+7 (499) -784-684-46</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
