@@ -1,4 +1,4 @@
-:root{
+:root {
   // Common
   --font-main: "Open Sans", "Arial", sans-serif;
   --accent-color: hsla(174 91% 45% / 1);
@@ -6,9 +6,12 @@
 
   // Header
   --c-nav-link: hsla(0 0% 100% / 0.7);
+  --c-nav-link-mobile: hsla(228 3% 29% / 1);
+  --c-nav-link-arrow: hsla(234 18% 21% / 0.5);
+  --bg-nav-decor: hsla(0 0% 100% / 0.2);
+  --bg-nav-mobile: hsla(0 0% 100% / 1);
+  --bg-nav-link-mobile: hsla(0 0% 96% / 1);
   --c-header: hsla(0 0% 100% / 1);
   --c-header-text: hsla(0 0% 100% / 0.8);
-  --bg-nav-decor: hsla(0 0% 100% / 0.2);
   --bd-header-input: hsla(224 12% 81% / 1);
-
 }

@@ -1,0 +1,40 @@
+.no-js .menu-control {
+  display: none;
+}
+
+.menu-control {
+  display: none;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  background: var(--accent-color);
+  border: 0;
+
+  &--close {
+    background: transparent;
+  }
+
+  @media (max-width: 1023px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    &:hover,
+    &:focus {
+      .menu-control__icon {
+        transform-origin: center;
+        transition: transform 0.2s;
+        transform: rotateZ(360deg);
+      }
+    }
+  }
+}
+
+.menu-control__icon:not(.menu-control__icon--active) {
+  display: none;
+}

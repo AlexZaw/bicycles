@@ -5,14 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
+  <title>Moon. Продажа велосипедов.</title>
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
-<body class="page__body">
-  <div class="page__wrapper">
+<body class="page__body no-js">
     <header class="main-header">
       <div class="main-header__wrapper">
+        <!-- the class "menu-control--close" shows the styles of the button for closing the menu-->
+        <button class="menu-control" type="button">
+          <svg width="30" height="30">
+            <use width="30" height="30" class="menu-control__icon menu-control__icon--active" xlink:href="./img/sprite_auto.svg#icon-menu"></use>
+            <use width="24" height="25" class="menu-control__icon" xlink:href="./img/sprite_auto.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <!-- the class "main-header__nav--closed" hides the mobile menu -->
         <nav class="main-header__nav">
           <ul>
             <li>
@@ -31,7 +38,7 @@
         </nav>
         <div class="main-header__content">
           <div class="main-header__text">
-            <a class="logo">
+            <a class="main-header__logo">
               <img src="./img/logo.svg" width="68" height="21" alt="Логотип компании Moon">
             </a>
             <h1>Мы продаем велосипеды</h1>
@@ -50,7 +57,7 @@
         </div>
       </div>
     </header>
-  </div>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
