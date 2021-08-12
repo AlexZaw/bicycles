@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="page">
+<html lang="ru" class="page">
 
 <head>
   <meta charset="UTF-8">
@@ -61,14 +61,78 @@
   <main>
     <section class="about">
       <h2>Несколько фактов о нас</h2>
-        <ul>
-          <li>Самый широкий выбор велосипедов!</li>
-          <li>Доставка велосипедов по всей России!</li>
-          <li>Большой выбор крутых аксессуаров!</li>
-          <li>Профессиональные консультации!</li>
-        </ul>
+      <ul>
+        <li>Самый широкий выбор велосипедов!</li>
+        <li>Доставка велосипедов по всей России!</li>
+        <li>Большой выбор крутых аксессуаров!</li>
+        <li>Профессиональные консультации!</li>
+      </ul>
     </section>
-
+    <section class="types">
+      <h2>Виды велосипедов</h2>
+      <ul>
+        <li>
+          <h3>
+            <a href="#">Дорожный велосипед</a>
+          </h3>
+          <div class="types__image-wrapper">
+            <img srcset="
+            ./img/types/road-mobile@1x.jpg 270w,
+            ./img/types/road-mobile@2x.jpg 540w,
+            ./img/types/road-desktop@1x.jpg 342w,
+            ./img/types/road-desktop@2x.jpg 684w
+            " sizes="
+              (min-width: 1024px) 342px,
+              ((min-width: 1024px) and (min-resolution: 2dppx)) 684px,
+              (max-width: 1023px) 270px,
+              ((max-width: 1023px) and (min-resolution: 2dppx)) 540px
+              "
+              src="./img/types/road-desktop@1x.jpg"
+          width="342" height="503" alt="Фото дорожного велосипеда">
+          </div>
+        </li>
+        <li>
+          <h3>
+            <a href="#">Горный велосипед</a>
+          </h3>
+          <div class="types__image-wrapper">
+            <img srcset="
+            ./img/types/mountain-mobile@1x.jpg 270w,
+            ./img/types/mountain-mobile@2x.jpg 540w,
+            ./img/types/mountain-desktop@1x.jpg 342w,
+            ./img/types/mountain-desktop@2x.jpg 684w
+            " sizes="
+              (min-width: 1024px) 342px,
+              ((min-width: 1024px) and (min-resolution: 2dppx)) 684px,
+              (max-width: 1023px) 270px,
+              ((max-width: 1023px) and (min-resolution: 2dppx)) 540px
+              "
+              src="./img/types/mountain-desktop@1x.jpg"
+          width="342" height="566" alt="Фото горного велосипеда">
+          </div>
+        </li>
+        <li>
+          <h3>
+            <a href="#">Детский велосипед</a>
+          </h3>
+          <div class="types__image-wrapper">
+            <img srcset="
+            ./img/types/children-mobile@1x.jpg 270w,
+            ./img/types/children-mobile@2x.jpg 540w,
+            ./img/types/children-desktop@1x.jpg 342w,
+            ./img/types/children-desktop@2x.jpg 684w
+            " sizes="
+              (min-width: 1024px) 342px,
+              ((min-width: 1024px) and (min-resolution: 2dppx)) 684px,
+              (max-width: 1023px) 270px,
+              ((max-width: 1023px) and (min-resolution: 2dppx)) 540px
+              "
+              src="./img/types/children-desktop@1x.jpg"
+          width="342" height="513" alt="Фото детского велосипеда">
+          </div>
+        </li>
+      </ul>
+    </section>
   </main>
   <footer class="main-footer">
     <div class="main-footer__text">
@@ -84,22 +148,22 @@
               ./img/common/map-tablet@2x.webp 2x">
           <source type="image/webp" media="(max-width: 767px)" srcset="./img/common/map-mobile@1x.webp 1x,
               ./img/common/map-mobile@2x.webp 2x">
-          <img srcset="
-              ./img/common/map-mobile@1x.png 320w,
-              ./img/common/map-mobile@2x.png 640w,
-              ./img/common/map-tablet@1x.png 768w,
-              ./img/common/map-tablet@2x.png 1536w,
-              ./img/common/map-desktop@1x.png 1024w,
-              ./img/common/map-desktop@2x.png 2048w
-              " sizes="
-                (min-width: 1024px) 957px,
-                ((min-width: 1024px) and (min-resolution: 2dppx)) 1914px,
-                (min-width: 768px) 698px,
-                ((min-width: 768px) and (min-resolution: 2dppx)) 1396px,
-                (max-width: 767px) 320px,
-                ((max-width: 767px) and (min-resolution: 2dppx)) 640px" src="./img/common/map-desktop@1x.png"
-            width="957" height="530" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19">
-        </picture>
+            <img srcset="
+            ./img/common/map-mobile@1x.png 320w,
+            ./img/common/map-mobile@2x.png 640w,
+            ./img/common/map-tablet@1x.png 698w,
+            ./img/common/map-tablet@2x.png 1396w,
+            ./img/common/map-desktop@1x.png 957w,
+            ./img/common/map-desktop@2x.png 1914w
+            " sizes="
+              (min-width: 1024px) 957px,
+              ((min-width: 1024px) and (min-resolution: 2dppx)) 1914px,
+              (min-width: 768px) 698px,
+              ((min-width: 768px) and (min-resolution: 2dppx)) 1396px,
+              (max-width: 767px) 320px,
+              ((max-width: 767px) and (min-resolution: 2dppx)) 640px" src="./img/common/map-desktop@1x.png"
+          width="957" height="530" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19">
+          </picture>
       </noscript>
       <iframe hidden
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124007!2d30.320894616173568!3d59.93879686904788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1628697289878!5m2!1sru!2sru"
