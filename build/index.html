@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Moon. Продажа велосипедов.</title>
+  <link rel="preload" href="./fonts/open-sans-v22-latin_cyrillic-300.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./fonts/open-sans-v22-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./fonts/open-sans-v22-latin_cyrillic-600.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./fonts/open-sans-v22-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -23,16 +27,16 @@
       <nav class="main-header__nav">
         <ul>
           <li>
-            <a href="#">О нас</a>
+            <a href="#about">О нас</a>
           </li>
           <li>
-            <a href="#">Виды велосипедов</a>
+            <a href="#types">Виды велосипедов</a>
           </li>
           <li>
-            <a href="#">Видео про велосипеды</a>
+            <a href="#video">Видео про велосипеды</a>
           </li>
           <li>
-            <a href="#">Контакты</a>
+            <a href="#contacts">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -48,9 +52,11 @@
           <fieldset>
             <legend>Заполните поля ниже и мы подберем велосипед Вашей мечты</legend>
             <div class="feedback-form__inner-wrapper">
-              <input type="text" name="user-name" placeholder="Введите Ваше Имя">
-              <input type="tel" name="user-phone" placeholder="Введите Ваш номер телефона">
-              <button type="submit">Подобрать велосипед мечты</button>
+              <label class="page__a11y-hidden" for="userName">Введите Ваше Имя</label>
+                <input type="text" name="user-name" id="userName" placeholder="Введите Ваше Имя">
+              <label class="page__a11y-hidden" for="userPhone">Введите Ваш номер телефона</label>
+                  <input type="tel" name="user-phone" id="userPhone" placeholder="Введите Ваш номер телефона">
+                <button type="submit">Подобрать велосипед мечты</button>
             </div>
           </fieldset>
         </form>
@@ -58,7 +64,7 @@
     </div>
   </header>
   <main>
-    <section class="about">
+    <section class="about" id="about">
       <h2>Несколько фактов о нас</h2>
       <ul>
         <li>Самый широкий выбор велосипедов!</li>
@@ -67,15 +73,21 @@
         <li>Профессиональные консультации!</li>
       </ul>
     </section>
-    <section class="types">
+    <section class="types" id="types">
       <h2>Виды велосипедов</h2>
       <ul>
         <li>
           <h3>
-            <a href="#">Дорожный велосипед</a>
+            <a>Дорожный велосипед</a>
           </h3>
           <div class="types__image-wrapper">
-            <img srcset="
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="./img/types/road-desktop@1x.webp 1x,
+              ./img/types/road-desktop@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="./img/types/road-mobile@1x.webp 1x,
+          ./img/types/road-mobile@2x.webp 2x">
+              <!-- mobile/tablet: 1x - 270px; 2x - 540px; desktop: 1x - 342px; 2x - 684px  -->
+              <img srcset="
             ./img/types/road-mobile@1x.jpg 270w,
             ./img/types/road-mobile@2x.jpg 540w,
             ./img/types/road-desktop@1x.jpg 342w,
@@ -86,14 +98,21 @@
               (max-width: 1023px) 270px,
               ((max-width: 1023px) and (min-resolution: 2dppx)) 540px
               " src="./img/types/road-desktop@1x.jpg" width="342" height="503" alt="Фото дорожного велосипеда">
+            </picture>
           </div>
         </li>
         <li>
           <h3>
-            <a href="#">Горный велосипед</a>
+            <a>Горный велосипед</a>
           </h3>
           <div class="types__image-wrapper">
-            <img srcset="
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="./img/types/mountain-desktop@1x.webp 1x,
+              ./img/types/mountain-desktop@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="./img/types/mountain-mobile@1x.webp 1x,
+          ./img/types/mountain-mobile@2x.webp 2x">
+              <!-- mobile/tablet: 1x - 270px; 2x - 540px; desktop: 1x - 342px; 2x - 684px  -->
+              <img srcset="
             ./img/types/mountain-mobile@1x.jpg 270w,
             ./img/types/mountain-mobile@2x.jpg 540w,
             ./img/types/mountain-desktop@1x.jpg 342w,
@@ -104,14 +123,21 @@
               (max-width: 1023px) 270px,
               ((max-width: 1023px) and (min-resolution: 2dppx)) 540px
               " src="./img/types/mountain-desktop@1x.jpg" width="342" height="566" alt="Фото горного велосипеда">
+            </picture>
           </div>
         </li>
         <li>
           <h3>
-            <a href="#">Детский велосипед</a>
+            <a>Детский велосипед</a>
           </h3>
           <div class="types__image-wrapper">
-            <img srcset="
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="./img/types/children-desktop@1x.webp 1x,
+              ./img/types/children-desktop@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="./img/types/children-mobile@1x.webp 1x,
+          ./img/types/children-mobile@2x.webp 2x">
+              <!-- mobile/tablet: 1x - 270px; 2x - 540px; desktop: 1x - 342px; 2x - 684px  -->
+              <img srcset="
             ./img/types/children-mobile@1x.jpg 270w,
             ./img/types/children-mobile@2x.jpg 540w,
             ./img/types/children-desktop@1x.jpg 342w,
@@ -122,13 +148,14 @@
               (max-width: 1023px) 270px,
               ((max-width: 1023px) and (min-resolution: 2dppx)) 540px
               " src="./img/types/children-desktop@1x.jpg" width="342" height="513" alt="Фото детского велосипеда">
+            </picture>
           </div>
         </li>
       </ul>
     </section>
-    <section class="video">
-        <h2>Видео про велосипеды</h2>
-        <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+    <section class="video" id="video">
+      <h2>Видео про велосипеды</h2>
+      <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
       <div class="video__wrapper">
         <div class="video__player">
           <button class="video__button" type="button">
@@ -136,7 +163,15 @@
               <use xlink:href="./img/sprite_auto.svg#icon-play"></use>
             </svg>
           </button>
-          <img srcset="
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="./img/video/video-preview-desktop@1x.webp 1x,
+            ./img/video/video-preview-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="./img/video/video-preview-tablet@1x.webp 1x,
+        ./img/video/video-preview-tablet@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 767px)" srcset="../img/video/video-preview-mobile@1x.webp 1x,
+        ./img/video/video-preview-mobile@2x.webp 2x">
+            <!-- mobile: 1x - 288px; 2x - 576px; tablet: 1x - 503px; 2x - 1006px; desktop: 1x - 929px; 2x - 1858px  -->
+            <img srcset="
           ./img/video/video-preview-mobile@1x.jpg 288w,
           ./img/video/video-preview-mobile@2x.jpg 576w,
           ./img/video/video-preview-tablet@1x.jpg 503w,
@@ -151,11 +186,12 @@
             (max-width: 768px) 288px,
             ((max-width: 768px) and (min-resolution: 2dppx)) 576px
             " src="./img/video/video-preview-desktop@1x.jpg" width="929" height="522" alt="Превью видео">
+          </picture>
         </div>
       </div>
     </section>
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer" id="contacts">
     <div class="main-footer__text">
       <h2>Как нас найти?</h2>
       <p>Мы находимся по адресу: <br aria-hidden="true"> Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
@@ -169,7 +205,9 @@
               ./img/common/map-tablet@2x.webp 2x">
           <source type="image/webp" media="(max-width: 767px)" srcset="./img/common/map-mobile@1x.webp 1x,
               ./img/common/map-mobile@2x.webp 2x">
-            <img srcset="
+          <!-- mobile: 1x - 320px; 2x - 640px; tablet: 1x - 698px; 2x - 1396px; desktop: 1x - 957px; 2x - 1914px  -->
+
+          <img srcset="
             ./img/common/map-mobile@1x.png 320w,
             ./img/common/map-mobile@2x.png 640w,
             ./img/common/map-tablet@1x.png 698w,
@@ -183,7 +221,7 @@
               ((min-width: 768px) and (min-resolution: 2dppx)) 1396px,
               (max-width: 767px) 320px,
               ((max-width: 767px) and (min-resolution: 2dppx)) 640px" src="./img/common/map-desktop@1x.png" width="957" height="530" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19">
-          </picture>
+        </picture>
       </noscript>
       <iframe hidden="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124007!2d30.320894616173568!3d59.93879686904788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1628697289878!5m2!1sru!2sru" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
