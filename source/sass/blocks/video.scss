@@ -1,0 +1,131 @@
+.video {
+  position: relative;
+  padding-top: 120px;
+  min-height: 706px;
+  margin-bottom: 248px;
+  text-align: center;
+  background-color: var(--bg-video);
+
+  @media (max-width: 1023px) {
+    min-height: 413px;
+    margin-bottom: 155px;
+    padding-top: 70px;
+  }
+
+  @media (max-width: 767px) {
+    min-height: 384px;
+    margin-bottom: 119px;
+    padding-top: 84px;
+  }
+}
+
+.video h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 30px;
+  color: var(--c-header);
+
+  @media (max-width: 1023px) {
+    font-size: 24px;
+  }
+}
+
+.video p {
+  max-width: 340px;
+  margin: 0 auto;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--c-video-text);
+
+  @media (max-width: 1023px) {
+    max-width: 430px;
+  }
+
+  @media (max-width: 767px) {
+    max-width: 288px;
+    letter-spacing: -0.01em;
+  }
+}
+
+.video__wrapper {
+  position: absolute;
+  width: 100%;
+  max-width: 929px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -98px;
+
+  @media (max-width: 1023px) {
+    max-width: 503px;
+    bottom: -85px;
+  }
+
+  @media (max-width: 767px) {
+    max-width: 288px;
+    bottom: -49px;
+  }
+}
+
+.video__player {
+  position: relative;
+  background-color: var(--bg-video);
+}
+
+.video__player img {
+  @media (max-width: 1023px) {
+    max-width: 503px;
+    max-height: 282px;
+  }
+
+  @media (max-width: 767px) {
+    max-width: 288px;
+    max-height: 161px;
+  }
+}
+
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  transition: transform 0.2s, opacity 0.2s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  @media (max-width: 1023px) {
+    width: 90px;
+    height: 90px;
+  }
+
+  @media (max-width: 767px) {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+.video__button svg {
+  @media (max-width: 1023px) {
+    width: 18px;
+    height: 25px;
+  }
+
+  @media (max-width: 767px) {
+    width: 13px;
+    height: 18px;
+  }
+}

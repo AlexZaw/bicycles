@@ -1,4 +1,10 @@
 .main-footer {
+  padding-bottom: 96px;
+
+  @media (max-width: 1023px) {
+    padding-bottom: 53px;
+  }
+
   @media (max-width: 767px) {
     padding-bottom: 31px;
   }
@@ -13,6 +19,7 @@
 }
 
 .main-footer__text h2 {
+  margin-top: 0;
   margin-bottom: 30px;
   font-size: 30px;
   font-weight: 600;

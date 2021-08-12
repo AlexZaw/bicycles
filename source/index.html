@@ -133,6 +133,36 @@
         </li>
       </ul>
     </section>
+    <section class="video">
+        <h2>Видео про велосипеды</h2>
+        <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+      <div class="video__wrapper">
+        <div class="video__player">
+          <button class="video__button" type="button">
+            <svg width="14" height="19">
+              <use xlink:href="./img/sprite_auto.svg#icon-play"></use>
+            </svg>
+          </button>
+          <img srcset="
+          ./img/video/video-preview-mobile@1x.jpg 288w,
+          ./img/video/video-preview-mobile@2x.jpg 576w,
+          ./img/video/video-preview-tablet@1x.jpg 503w,
+          ./img/video/video-preview-tablet@2x.jpg 1006w,
+          ./img/video/video-preview-desktop@1x.jpg 929w,
+          ./img/video/video-preview-desktop@2x.jpg 1858w
+          " sizes="
+            (min-width: 1024px) 929px,
+            ((min-width: 1024px) and (min-resolution: 2dppx)) 1858px,
+            (min-width: 768px) 503px,
+            ((min-width: 768px) and (min-resolution: 2dppx)) 1006px,
+            (max-width: 768px) 288px,
+            ((max-width: 768px) and (min-resolution: 2dppx)) 576px
+            "
+            src="./img/video/video-preview-desktop@1x.jpg"
+        width="929" height="522" alt="Превью видео">
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="main-footer">
     <div class="main-footer__text">
