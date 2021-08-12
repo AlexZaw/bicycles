@@ -56,6 +56,8 @@
   margin-left: 25px;
   margin-right: 25px;
   margin-bottom: 50px;
+  position: relative;
+  z-index: 0;
 
   @media (max-width: 1023px) {
     flex-basis: calc(50% - 50px);
@@ -158,6 +160,7 @@
 .types h3 {
   margin-bottom: 0;
   order: 2;
+  z-index: 1;
 }
 
 .types a {
@@ -167,6 +170,16 @@
   letter-spacing: -0.5px;
   color: var(--c-text-primary);
   text-decoration: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
 }
 
 .types img {
