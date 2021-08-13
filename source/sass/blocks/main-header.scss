@@ -31,7 +31,6 @@
 
   &::before {
     /* stylelint-disable nonconsecutive duplicates */
-
     content: "";
     position: absolute;
     z-index: -1;
@@ -39,12 +38,7 @@
     height: 100%;
     background-image: image-set(url("../img/promo/promo-bg-desktop@2x.jpg") 2x, url("../img/promo/promo-bg-desktop@1x.jpg") 1x);
     /* stylelint-disable-next-line */
-    background-image: image-set(
-      url("../img/promo/promo-bg-desktop@2x.webp") type("image/webp") 2x,
-      url("../img/promo/promo-bg-desktop@1x.webp") type("image/webp") 1x,
-      url("../img/promo/promo-bg-desktop@2x.jpg") 2x,
-      url("../img/promo/promo-bg-desktop@1x.jpg") 1x);
-
+    background-image: image-set(url("../img/promo/promo-bg-desktop@2x.webp") 2x, url("../img/promo/promo-bg-desktop@1x.webp") 1x);
     background-size: cover;
     background-color: var(--bg-header);
 
@@ -59,11 +53,7 @@
       background-position: center;
       background-image: image-set(url("../img/promo/promo-bg-tablet@2x.jpg") 2x, url("../img/promo/promo-bg-tablet@1x.jpg") 1x);
       /* stylelint-disable-next-line */
-      background-image: image-set(
-        url("../img/promo/promo-bg-tablet@2x.webp") type("image/webp") 2x,
-        url("../img/promo/promo-bg-tablet@1x.webp") type("image/webp") 1x,
-        url("../img/promo/promo-bg-tablet@2x.jpg") 2x,
-        url("../img/promo/promo-bg-tablet@1x.jpg") 1x);
+      background-image: image-set(url("../img/promo/promo-bg-tablet@2x.webp") 2x, url("../img/promo/promo-bg-tablet@1x.webp") 1x);
     }
 
     @media (max-width: 767px) {
@@ -72,11 +62,7 @@
       margin: 0 -16px;
       background-image: image-set(url("../img/promo/promo-bg-mobile@2x.jpg") 2x, url("../img/promo/promo-bg-mobile@1x.jpg") 1x);
       /* stylelint-disable-next-line */
-      background-image: image-set(
-        url("../img/promo/promo-bg-mobile@2x.webp") type("image/webp") 2x,
-        url("../img/promo/promo-bg-mobile@1x.webp") type("image/webp") 1x,
-        url("../img/promo/promo-bg-mobile@2x.jpg") 2x,
-        url("../img/promo/promo-bg-mobile@1x.jpg") 1x);
+      background-image: image-set(url("../img/promo/promo-bg-mobile@2x.webp") 2x, url("../img/promo/promo-bg-mobile@1x.webp") 1x);
       background-repeat: no-repeat;
       background-size: cover;
     }
