@@ -148,18 +148,20 @@
 .main-header__nav ul {
   @include reset-list;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 22px;
 
   @media (max-width: 1023px) {
     display: block;
-    padding: 0;
     background-color: var(--bg-nav-mobile);
   }
 }
 
 .main-header__nav li {
+  padding: 0 20px;
+
   @media (max-width: 1023px) {
+    padding: 0;
     margin-bottom: 30px;
   }
 }

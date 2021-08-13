@@ -1,20 +1,19 @@
 .video {
   position: relative;
   padding-top: 120px;
-  min-height: 706px;
-  margin-bottom: 248px;
+  margin-bottom: 150px;
   text-align: center;
-  background-color: var(--bg-video);
+  background-image: linear-gradient(to top, transparent 98px, var(--bg-video) 98px);
 
   @media (max-width: 1023px) {
-    min-height: 413px;
-    margin-bottom: 155px;
+    background-image: linear-gradient(to top, transparent 85px, var(--bg-video) 85px);
+
+    margin-bottom: 70px;
     padding-top: 70px;
   }
 
   @media (max-width: 767px) {
-    min-height: 384px;
-    margin-bottom: 119px;
+    background-image: linear-gradient(to top, transparent 49px, var(--bg-video) 49px);
     padding-top: 84px;
   }
 }
@@ -22,6 +21,7 @@
 .video h2 {
   margin-top: 0;
   margin-bottom: 20px;
+  padding: 0 20px;
   font-size: 30px;
   font-weight: 600;
   line-height: 30px;
@@ -29,6 +29,10 @@
 
   @media (max-width: 1023px) {
     font-size: 24px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0;
   }
 }
 
@@ -50,21 +54,18 @@
 }
 
 .video__wrapper {
-  position: absolute;
   width: 100%;
   max-width: 929px;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -98px;
+  margin: 56px auto 0;
 
   @media (max-width: 1023px) {
     max-width: 503px;
-    bottom: -85px;
+    margin-top: 40px;
   }
 
   @media (max-width: 767px) {
     max-width: 288px;
-    bottom: -49px;
+    margin-top: 54px;
   }
 }
 
