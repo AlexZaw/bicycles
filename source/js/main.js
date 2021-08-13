@@ -13,6 +13,22 @@ const userNameField = feedbackForm['user-name'];
 const userPhoneField = feedbackForm['user-phone'];
 const phoneRegular = /^\+?[\d()\- ]+$/;
 
+const userData = {
+  name: '',
+  phone: '',
+};
+
+const isStorage = () => {
+  try{
+    userData.name = localStorage.getItem('userName');
+    userData.phone = localStorage.getItem('userPhone');
+    return true;
+  } catch (err) {
+    return false;
+  }
+};
+const isStorageSupport = isStorage();
+
 const isEscKey = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
 
 if(mapFrame) {
@@ -75,4 +91,26 @@ const onPhoneInput = (evt) => {
 if(userPhoneField){
   userPhoneField.addEventListener('input', onPhoneInput);
 }
+
+
+const fillForm = () => {
+  isStorage();
+  if(userData.name){
+    userNameField.value = userData.name;
+  }
+  if(userData.phone){
+    userPhoneField.value = userData.phone;
+  }
+};
+
+const onFormSubmit = () => {
+  if (isStorageSupport) {
+    localStorage.setItem('userName', userNameField.value);
+    localStorage.setItem('userPhone', userPhoneField.value);
+  }
+};
+
+if(feedbackForm){
+  feedbackForm.addEventListener('submit', onFormSubmit);
+  fillForm();
 }

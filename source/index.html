@@ -50,14 +50,14 @@
           <h1>Мы продаем велосипеды</h1>
           <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
         </div>
-        <form class="main-header__form feedback-form" action="#">
+        <form class="main-header__form feedback-form" name="feedback" action="https://echo.htmlacademy.ru/" method="POST">
           <fieldset>
             <legend>Заполните поля ниже и мы подберем велосипед Вашей мечты</legend>
             <div class="feedback-form__inner-wrapper">
               <label class="page__a11y-hidden" for="userName" >Введите Ваше Имя</label>
-                <input type="text" name="user-name" id="userName" placeholder="Введите Ваше Имя">
+                <input type="text" name="user-name" id="userName" placeholder="Введите Ваше Имя" required>
               <label class="page__a11y-hidden" for="userPhone">Введите Ваш номер телефона</label>
-                  <input type="tel" name="user-phone" id="userPhone" placeholder="Введите Ваш номер телефона">
+                  <input type="tel" name="user-phone" id="userPhone" autocomplete="off" placeholder="Введите Ваш номер телефона" required>
                 <button type="submit">Подобрать велосипед мечты</button>
             </div>
           </fieldset>
