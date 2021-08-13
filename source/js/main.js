@@ -43,8 +43,12 @@ const toggleMenu = () => {
   menuBtn.classList.toggle(menuBtnClosed);
   changeMenuIcon();
   if(!navMenu.classList.contains(navClosed)){
+    menuBtn.setAttribute('aria-expanded', true);
     navMenu.addEventListener('click', closeMenu);
     document.addEventListener('keydown', closeMenu);
+  } else {
+    menuBtn.setAttribute('aria-expanded', false);
+
   }
 };
 

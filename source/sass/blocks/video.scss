@@ -117,15 +117,3 @@
     height: 65px;
   }
 }
-
-.video__button svg {
-  @media (max-width: 1023px) {
-    width: 18px;
-    height: 25px;
-  }
-
-  @media (max-width: 767px) {
-    width: 13px;
-    height: 18px;
-  }
-}

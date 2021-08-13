@@ -17,8 +17,8 @@
   <header class="main-header">
     <div class="main-header__wrapper">
       <!-- the class "menu-control--close" shows the styles of the button for closing the menu-->
-      <button class="menu-control" type="button">
-        <svg width="30" height="30">
+      <button class="menu-control" type="button" aria-label="Мобильное меню" aria-expanded="false" hidden>
+        <svg width="30" height="30" aria-hidden="true">
           <use width="30" height="30" class="menu-control__icon menu-control__icon--active"
             xlink:href="./img/sprite_auto.svg#icon-menu"></use>
           <use width="24" height="25" class="menu-control__icon" xlink:href="./img/sprite_auto.svg#icon-cross"></use>
@@ -159,8 +159,8 @@
       <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
       <div class="video__wrapper">
         <div class="video__player">
-          <button class="video__button" type="button">
-            <svg width="14" height="19">
+          <button class="video__button" type="button"><span class="page__a11y-hidden">Воспроизвести видео</span>
+            <svg width="14" height="19" aria-hidden="true">
               <use xlink:href="./img/sprite_auto.svg#icon-play"></use>
             </svg>
           </button>
@@ -232,13 +232,13 @@
     <div class="main-footer__contacts">
       <ul>
         <li>
-          <svg width="26" height="20">
+          <svg width="26" height="20" aria-hidden="true">
             <use xlink:href="./img/sprite_auto.svg#icon-email"></use>
           </svg>
           <a href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
         </li>
         <li>
-          <svg width="22" height="24">
+          <svg width="22" height="24" aria-hidden="true">
             <use xlink:href="./img/sprite_auto.svg#icon-phone"></use>
           </svg>
           <a href="tel:+749978468446">+7 (499) -784-684-46</a>
