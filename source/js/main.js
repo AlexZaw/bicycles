@@ -10,27 +10,47 @@ const menuBtnClosed = 'menu-control--close';
 const menuIconActive = 'menu-control__icon--active';
 const phoneField = document.querySelector('#userPhone');
 const phoneRegular = /^\+?\d+$/;
+
+const isEscKey = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
+
 if(mapFrame) {
   mapFrame.removeAttribute('hidden');
 }
 
 if(navMenu) {
-navMenu.classList.add(navClosed);
+  navMenu.classList.add(navClosed);
 }
 
-const toggleMenu = () => {
-  navMenu.classList.toggle(navClosed);
-  menuBtn.classList.toggle(menuBtnClosed);
+const changeMenuIcon = () =>{
   menuIcons.forEach((icon) => icon.classList.toggle(menuIconActive));
   const currentWidth = menuBtn.querySelector(`.${menuIconActive}`).getAttribute('width');
   const currentHeight = menuBtn.querySelector(`.${menuIconActive}`).getAttribute('height');
   menuBtnSvg.style.cssText = `width: ${currentWidth}px; height: ${currentHeight}px`;
 };
 
-if(menuBtn && navMenu && menuIcons && menuBtnSvg){
-menuBtn.addEventListener('click', toggleMenu);
-}
+const closeMenu =(evt) =>{
+  if(evt.target.tagName === 'A' || isEscKey(evt)){
+    navMenu.classList.add(navClosed);
+    menuBtn.classList.remove(menuBtnClosed);
+    changeMenuIcon();
+    navMenu.removeEventListener('click', closeMenu);
+    document.removeEventListener('keydown', closeMenu);
+  }
+};
 
+const toggleMenu = () => {
+  navMenu.classList.toggle(navClosed);
+  menuBtn.classList.toggle(menuBtnClosed);
+  changeMenuIcon();
+  if(!navMenu.classList.contains(navClosed)){
+    navMenu.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', closeMenu);
+  }
+};
+
+if(menuBtn && navMenu && menuIcons && menuBtnSvg){
+  menuBtn.addEventListener('click', toggleMenu);
+}
 
 const checkPhoneField = (field) => {
   if(!phoneRegular.test(field.value)) {
