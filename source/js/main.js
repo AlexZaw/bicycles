@@ -29,7 +29,7 @@ const changeMenuIcon = () =>{
 };
 
 const closeMenu =(evt) =>{
-  if(evt.target.tagName === 'A' || isEscKey(evt)){
+  if((evt.type === 'click' && evt.target.tagName === 'A') || isEscKey(evt)){
     navMenu.classList.add(navClosed);
     menuBtn.classList.remove(menuBtnClosed);
     changeMenuIcon();
