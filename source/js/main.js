@@ -1,6 +1,6 @@
 'use strict';
 document.body.classList.remove('no-js');
-document.querySelector('.map iframe').removeAttribute('hidden');
+const mapFrame = document.querySelector('.map iframe');
 const menuBtn = document.querySelector('.menu-control');
 const menuIcons = menuBtn.querySelectorAll('.menu-control__icon');
 const menuBtnSvg = menuBtn.querySelector('svg');
@@ -10,7 +10,13 @@ const menuBtnClosed = 'menu-control--close';
 const menuIconActive = 'menu-control__icon--active';
 const phoneField = document.querySelector('#userPhone');
 const phoneRegular = /^\+?\d+$/;
+if(mapFrame) {
+  mapFrame.removeAttribute('hidden');
+}
+
+if(navMenu) {
 navMenu.classList.add(navClosed);
+}
 
 const toggleMenu = () => {
   navMenu.classList.toggle(navClosed);
@@ -21,7 +27,11 @@ const toggleMenu = () => {
   menuBtnSvg.style.cssText = `width: ${currentWidth}px; height: ${currentHeight}px`;
 };
 
+if(menuBtn && navMenu && menuIcons && menuBtnSvg){
 menuBtn.addEventListener('click', toggleMenu);
+}
+
+
 const checkPhoneField = (field) => {
   if(!phoneRegular.test(field.value)) {
     field.setCustomValidity('Номер должен быть вида +12345678900');
