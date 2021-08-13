@@ -8,6 +8,10 @@ html {
   box-sizing: inherit;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 img {
   max-width: 100%;
   display: inline-block;
