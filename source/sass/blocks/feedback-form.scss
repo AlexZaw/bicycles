@@ -54,6 +54,15 @@
   box-shadow: inset 0 0 0 1px var(--bd-header-input);
   border-radius: 6px;
 
+  &:hover {
+    box-shadow: 0 0 5px var(--accent-color);
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: inset 0 0 0 1px var(--accent-color);
+  }
+
   @media (max-width: 1023px) {
     padding: 12px 21px;
   }
