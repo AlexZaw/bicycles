@@ -8,8 +8,10 @@ const navMenu = document.querySelector('.main-header__nav');
 const navClosed = 'main-header__nav--closed';
 const menuBtnClosed = 'menu-control--close';
 const menuIconActive = 'menu-control__icon--active';
-const phoneField = document.querySelector('#userPhone');
-const phoneRegular = /^\+?\d+$/;
+const feedbackForm = document.forms.feedback;
+const userNameField = feedbackForm['user-name'];
+const userPhoneField = feedbackForm['user-phone'];
+const phoneRegular = /^\+?[\d()\- ]+$/;
 
 const isEscKey = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
 
@@ -58,7 +60,8 @@ if(menuBtn && navMenu && menuIcons && menuBtnSvg){
 
 const checkPhoneField = (field) => {
   if(!phoneRegular.test(field.value)) {
-    field.setCustomValidity('Номер должен быть вида +12345678900');
+    field.setCustomValidity(
+      'Номер может содержать только цифры, пробел, символы ` - ( ) ` и символ ` + ` в начале номера');
   } else {
     field.setCustomValidity('');
   }
@@ -69,6 +72,7 @@ const onPhoneInput = (evt) => {
   checkPhoneField(evt.target);
 };
 
-if(phoneField){
-  phoneField.addEventListener('input', onPhoneInput);
+if(userPhoneField){
+  userPhoneField.addEventListener('input', onPhoneInput);
+}
 }
