@@ -1,12 +1,14 @@
 .feedback-form {
-  margin-top: 4px;
   justify-self: end;
 
   @media (max-width: 1023px) {
     justify-self: center;
-    margin-top: 0;
     padding-top: 70px;
-    max-width: 324px;
+    width: 41.8%;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
   }
 }
 
@@ -21,6 +23,7 @@
   font-size: 17px;
   font-weight: 600;
   line-height: 28px;
+  letter-spacing: -0.005em;
   text-align: center;
   color: var(--c-header);
 
