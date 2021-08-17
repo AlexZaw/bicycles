@@ -17,21 +17,32 @@
 }
 
 .types h2 {
-  margin-top: 0;
-  margin-bottom: 51px;
+  margin: 0;
   padding: 0 20px;
   font-size: 30px;
   font-weight: 600;
   line-height: 1;
 
   @media (max-width: 1023px) {
-    margin-bottom: 30px;
     font-size: 24px;
     line-height: 41px;
   }
 
   @media (max-width: 767px) {
     padding: 0;
+  }
+}
+
+.types__list-wrapper {
+  width: 100%;
+  padding-top: 51px;
+
+  @media (min-width: 1024px) {
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 1023px) {
+    padding-top: 20px;
   }
 }
 
