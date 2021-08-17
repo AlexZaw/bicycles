@@ -95,7 +95,7 @@
 .main-footer__contacts ul {
   @include reset-list;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
+  grid-template-columns: auto auto;
   column-gap: 90px;
   justify-content: center;
   max-width: 957px;
