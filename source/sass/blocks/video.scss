@@ -59,12 +59,10 @@
   margin: 56px auto 0;
 
   @media (max-width: 1023px) {
-    max-width: 503px;
     margin-top: 40px;
   }
 
   @media (max-width: 767px) {
-    max-width: 288px;
     margin-top: 54px;
   }
 }
@@ -72,17 +70,15 @@
 .video__player {
   position: relative;
   background-color: var(--bg-video);
-}
+  margin: 0 auto;
+  width: 100%;
 
-.video__player img {
   @media (max-width: 1023px) {
-    max-width: 503px;
-    max-height: 282px;
+    max-width: 65.5%;
   }
 
   @media (max-width: 767px) {
-    max-width: 288px;
-    max-height: 161px;
+    max-width: calc(100% - 32px);
   }
 }
 
