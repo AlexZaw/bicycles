@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="У нас вы можете подобрать и приобрести велосипед своей мечты!">
+  <title>Moon. Продажа велосипедов.</title>
+  <link rel="preload" href="./fonts/open-sans-v22-latin_cyrillic-300.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./fonts/open-sans-v22-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./fonts/open-sans-v22-latin_cyrillic-600.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./fonts/open-sans-v22-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="page__body no-js">
+  <header class="main-header">
+    <div class="main-header__wrapper">
+      <!-- the class "menu-control--close" shows the styles of the button for closing the menu-->
+      <button class="menu-control" type="button" aria-label="Мобильное меню" aria-expanded="false" hidden="">
+        <svg width="30" height="30" aria-hidden="true">
+          <use width="30" height="30" class="menu-control__icon menu-control__icon--active" xlink:href="./img/sprite_auto.svg#icon-menu"></use>
+          <use width="24" height="25" class="menu-control__icon" xlink:href="./img/sprite_auto.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <!-- the class "main-header__nav--closed" hides the mobile menu -->
+      <nav class="main-header__nav">
+        <ul>
+          <li>
+            <a href="#about">О нас</a>
+          </li>
+          <li>
+            <a href="#types">Виды велосипедов</a>
+          </li>
+          <li>
+            <a href="#video">Видео про велосипеды</a>
+          </li>
+          <li>
+            <a href="#contacts">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-header__content">
+        <div class="main-header__text">
+          <a class="main-header__logo">
+            <img src="./img/logo.svg" width="68" height="21" alt="Логотип компании Moon">
+          </a>
+          <h1>Мы продаем велосипеды</h1>
+          <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+        </div>
+        <form class="main-header__form feedback-form" name="feedback" action="https://echo.htmlacademy.ru/" method="POST">
+          <fieldset>
+            <legend>Заполните поля ниже и мы подберем велосипед Вашей мечты</legend>
+            <div class="feedback-form__inner-wrapper">
+              <label class="page__a11y-hidden" for="userName">Введите Ваше Имя</label>
+                <input type="text" name="user-name" id="userName" placeholder="Введите Ваше Имя" required="">
+              <label class="page__a11y-hidden" for="userPhone">Введите Ваш номер телефона</label>
+                  <input type="tel" name="user-phone" id="userPhone" autocomplete="off" placeholder="Введите Ваш номер телефона" required="">
+                <button type="submit">Подобрать велосипед мечты</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="about" id="about">
+      <h2>Несколько фактов о нас</h2>
+      <ul>
+        <li>Самый широкий выбор велосипедов!</li>
+        <li>Доставка велосипедов по всей России!</li>
+        <li>Большой выбор крутых аксессуаров!</li>
+        <li>Профессиональные консультации!</li>
+      </ul>
+    </section>
+    <section class="types" id="types">
+      <h2>Виды велосипедов</h2>
+      <div class="types__list-wrapper">
+
+      <ul>
+        <li>
+          <h3>
+            <a>Дорожный велосипед</a>
+          </h3>
+          <div class="types__image-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="./img/types/road-desktop@1x.webp 1x,
+              ./img/types/road-desktop@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="./img/types/road-mobile@1x.webp 1x,
+          ./img/types/road-mobile@2x.webp 2x">
+              <!-- mobile/tablet: 1x - 270px; 2x - 540px; desktop: 1x - 342px; 2x - 684px  -->
+              <img srcset="
+            ./img/types/road-mobile@1x.jpg 270w,
+            ./img/types/road-mobile@2x.jpg 540w,
+            ./img/types/road-desktop@1x.jpg 342w,
+            ./img/types/road-desktop@2x.jpg 684w
+            " sizes="
+              (min-width: 1024px) 342px,
+              ((min-width: 1024px) and (min-resolution: 2dppx)) 684px,
+              (max-width: 1023px) 270px,
+              ((max-width: 1023px) and (min-resolution: 2dppx)) 540px
+              " src="./img/types/road-desktop@1x.jpg" width="342" height="503" loading="lazy" alt="Фото дорожного велосипеда">
+            </picture>
+          </div>
+        </li>
+        <li>
+          <h3>
+            <a>Горный велосипед</a>
+          </h3>
+          <div class="types__image-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="./img/types/mountain-desktop@1x.webp 1x,
+              ./img/types/mountain-desktop@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="./img/types/mountain-mobile@1x.webp 1x,
+          ./img/types/mountain-mobile@2x.webp 2x">
+              <!-- mobile/tablet: 1x - 270px; 2x - 540px; desktop: 1x - 342px; 2x - 684px  -->
+              <img srcset="
+            ./img/types/mountain-mobile@1x.jpg 270w,
+            ./img/types/mountain-mobile@2x.jpg 540w,
+            ./img/types/mountain-desktop@1x.jpg 342w,
+            ./img/types/mountain-desktop@2x.jpg 684w
+            " sizes="
+              (min-width: 1024px) 342px,
+              ((min-width: 1024px) and (min-resolution: 2dppx)) 684px,
+              (max-width: 1023px) 270px,
+              ((max-width: 1023px) and (min-resolution: 2dppx)) 540px
+              " src="./img/types/mountain-desktop@1x.jpg" width="342" height="566" loading="lazy" alt="Фото горного велосипеда">
+            </picture>
+          </div>
+        </li>
+        <li>
+          <h3>
+            <a>Детский велосипед</a>
+          </h3>
+          <div class="types__image-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="./img/types/children-desktop@1x.webp 1x,
+              ./img/types/children-desktop@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="./img/types/children-mobile@1x.webp 1x,
+          ./img/types/children-mobile@2x.webp 2x">
+              <!-- mobile/tablet: 1x - 270px; 2x - 540px; desktop: 1x - 342px; 2x - 684px  -->
+              <img srcset="
+            ./img/types/children-mobile@1x.jpg 270w,
+            ./img/types/children-mobile@2x.jpg 540w,
+            ./img/types/children-desktop@1x.jpg 342w,
+            ./img/types/children-desktop@2x.jpg 684w
+            " sizes="
+              (min-width: 1024px) 342px,
+              ((min-width: 1024px) and (min-resolution: 2dppx)) 684px,
+              (max-width: 1023px) 270px,
+              ((max-width: 1023px) and (min-resolution: 2dppx)) 540px
+              " src="./img/types/children-desktop@1x.jpg" width="342" height="513" loading="lazy" alt="Фото детского велосипеда">
+            </picture>
+          </div>
+        </li>
+      </ul>
+    </div>
+    </section>
+    <section class="video" id="video">
+      <h2>Видео про велосипеды</h2>
+      <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+      <div class="video__wrapper">
+        <div class="video__player">
+          <button class="video__button" type="button"><span class="page__a11y-hidden">Воспроизвести видео</span>
+            <svg width="14" height="19" aria-hidden="true">
+              <use xlink:href="./img/sprite_auto.svg#icon-play"></use>
+            </svg>
+          </button>
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="./img/video/video-preview-desktop@1x.webp 1x,
+            ./img/video/video-preview-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="./img/video/video-preview-tablet@1x.webp 1x,
+        ./img/video/video-preview-tablet@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 767px)" srcset="./img/video/video-preview-mobile@1x.webp 1x,
+        ./img/video/video-preview-mobile@2x.webp 2x">
+            <!-- mobile: 1x - 288px; 2x - 576px; tablet: 1x - 503px; 2x - 1006px; desktop: 1x - 929px; 2x - 1858px  -->
+            <img srcset="
+          ./img/video/video-preview-mobile@1x.jpg 288w,
+          ./img/video/video-preview-mobile@2x.jpg 576w,
+          ./img/video/video-preview-tablet@1x.jpg 503w,
+          ./img/video/video-preview-tablet@2x.jpg 1006w,
+          ./img/video/video-preview-desktop@1x.jpg 929w,
+          ./img/video/video-preview-desktop@2x.jpg 1858w
+          " sizes="
+            (min-width: 1024px) 929px,
+            ((min-width: 1024px) and (min-resolution: 2dppx)) 1858px,
+            (min-width: 768px) 503px,
+            ((min-width: 768px) and (min-resolution: 2dppx)) 1006px,
+            (max-width: 768px) 288px,
+            ((max-width: 768px) and (min-resolution: 2dppx)) 576px
+            " src="./img/video/video-preview-desktop@1x.jpg" width="929" height="522" loading="lazy" alt="Превью видео">
+          </picture>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="main-footer" id="contacts">
+    <div class="main-footer__text">
+      <h2>Как нас найти?</h2>
+      <p>Мы находимся по адресу: <br aria-hidden="true"> Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+    </div>
+    <div class="main-footer__map map">
+      <noscript>
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="./img/common/map-desktop@1x.webp 1x,
+              ./img/common/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="./img/common/map-tablet@1x.webp 1x,
+              ./img/common/map-tablet@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 767px)" srcset="./img/common/map-mobile@1x.webp 1x,
+              ./img/common/map-mobile@2x.webp 2x">
+          <!-- mobile: 1x - 320px; 2x - 640px; tablet: 1x - 698px; 2x - 1396px; desktop: 1x - 957px; 2x - 1914px  -->
+
+          <img srcset="
+            ./img/common/map-mobile@1x.png 320w,
+            ./img/common/map-mobile@2x.png 640w,
+            ./img/common/map-tablet@1x.png 698w,
+            ./img/common/map-tablet@2x.png 1396w,
+            ./img/common/map-desktop@1x.png 957w,
+            ./img/common/map-desktop@2x.png 1914w
+            " sizes="
+              (min-width: 1024px) 957px,
+              ((min-width: 1024px) and (min-resolution: 2dppx)) 1914px,
+              (min-width: 768px) 698px,
+              ((min-width: 768px) and (min-resolution: 2dppx)) 1396px,
+              (max-width: 767px) 320px,
+              ((max-width: 767px) and (min-resolution: 2dppx)) 640px" src="./img/common/map-desktop@1x.png" width="957" height="530" loading="lazy" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19">
+        </picture>
+      </noscript>
+      <iframe hidden="" src="https://yandex.ru/map-widget/v1/?um=constructor%3A819f2a17ef5ba6ef17ac0e7eccacd904c39930da1a6f4f6d41452f3c6e821cc3&amp;source=constructor" frameborder="0"></iframe>
+    </div>
+    <div class="main-footer__contacts">
+      <ul>
+        <li>
+          <a href="mailto:puteshestviemechta@gmail.ru">
+            <svg width="26" height="20" aria-hidden="true">
+              <use xlink:href="./img/sprite_auto.svg#icon-email"></use>
+            </svg>
+            puteshestviemechta@gmail.ru
+          </a>
+        </li>
+        <li>
+          <a href="tel:+749978468446">
+            <svg width="22" height="24" aria-hidden="true">
+            <use xlink:href="./img/sprite_auto.svg#icon-phone"></use>
+          </svg>
+          +7 (499) -784-684-46
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <script src="./js/vendor.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
